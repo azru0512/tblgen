@@ -16,7 +16,7 @@ class c {
   int k = 3;
 }
 
-def rec1: c;
+def rec: c;
 
 let i = 2 in
   def rec2: c;
