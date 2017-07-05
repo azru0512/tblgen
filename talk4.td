@@ -27,5 +27,8 @@ class class2 <int p1, string p2 = "hello"> {
 
 def rec3 : class2 <5>;
 
-
+//
+// anonymous record.
+//
+def : class2 <3, "world">;
 
