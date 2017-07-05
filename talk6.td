@@ -24,6 +24,7 @@ def prim_types {
   dag d2 = (na (nb 1, 2), nc, 4);  
   code c;
   // similar to python """
+  // multiline string literal as code
   code c_hello_world = [{
 #include <stdio.h>    
 int main() {
@@ -31,11 +32,16 @@ int main() {
 }
   }] ;
 
-  string s_code = [{
-#include <stdio.h>    
-int main() {
-    printf("hello world \n");
-}
-  }] ;
+  // single line string literal as code
+  code c_return_0 = " #include <stdio.h>    int main() { return 0; } " ;
+
+  // support single line string literal only, doesn't support multiline
+  // string literal. i.e.,
+  //
+  //   """
+  //   this is multiline
+  //     string literal
+  //   """
+  string s_code = "this is single line string literal";
 }
 
